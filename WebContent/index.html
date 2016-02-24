@@ -29,7 +29,7 @@
 			<table>
 				<tr>
 					<td><label>Username</label></td>
-					<td><input type="text" name="userName" placeholder="Username"></td>
+					<td><input id="uname" type="text" name="userName" placeholder="Username"></td>
 				</tr>
 			
 				<tr>
@@ -58,5 +58,19 @@
 			</table>
 		</form>	
 	</section>
+	<script type="text/javascript">var element=document.getElementById("uname");
+element.addEventListener('copy', function(event){
+	event.preventDefault();
+	alert("copy not allowed");
+});
+element.addEventListener('paste', function(event){
+	event.preventDefault();
+	alert("paste not allowed");
+});
+document.addEventListener('contextmenu', function(event){
+	event.preventDefault();
+	alert("RightClick not allowed");
+});
+</script>
 </body>
 </html>
